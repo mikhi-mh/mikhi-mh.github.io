@@ -9,3 +9,11 @@ The Projects section should highlight some of the developer's best work, with de
 Finally, the Contact page should include a way for potential clients or employers to get in touch with the developer, such as an email address or a contact form. It's essential to make this section easy to find, so that interested parties can easily get in touch.
 
 Overall, a portfolio website for a developer serves as an online resume and an excellent way to showcase their skills and experience to the world.
+
+# Pages included
+1. Projects 
+2. Skills
+3. Work Experience
+4. Education
+5. Contribution
+6. Contact

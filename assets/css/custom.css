@@ -1,0 +1,97 @@
+/* Custom CSS to fix navigation issues */
+
+/* Make nav bar scrollable when content exceeds width */
+#nav {
+    overflow-x: auto !important; 
+    white-space: nowrap;
+    padding-left: 1rem;
+    scrollbar-width: thin; /* For Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#nav::-webkit-scrollbar {
+    height: 5px;
+}
+
+/* Handle for scrollbar */
+#nav::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+/* Make sure icons are visible */
+#nav ul.icons {
+    margin-left: auto;
+    padding-right: 1rem;
+    flex-shrink: 0;
+    display: flex;
+    position: sticky;
+    right: 0;
+    background: rgba(33, 41, 49, 0.8); /* Semi-transparent background to ensure visibility */
+    padding-left: 0.5rem;
+}
+
+/* Ensure menu items don't get cut off on smaller screens */
+#nav ul.links li a {
+    padding: 0 1.5rem;
+}
+
+/* Give menu items a minimum width to avoid squishing */
+#nav ul.links li {
+    min-width: fit-content;
+}
+
+/* Fix for mobile menu */
+@media screen and (max-width: 980px) {
+    /* Make the nav toggle button more visible */
+    #navPanelToggle {
+        display: block;
+        position: fixed;
+        top: 0.75rem;
+        right: 0.75rem;
+        z-index: 10001;
+        background-color: rgba(255, 255, 255, 0.875);
+        color: #212931;
+        padding: 0.5rem 1.25rem;
+        border-radius: 0.25rem;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    }
+
+    #navPanelToggle:hover {
+        background-color: #ffffff;
+    }
+
+    #navPanel {
+        overflow-y: auto;
+        max-height: 100vh;
+    }
+    
+    #navPanel .links {
+        padding-bottom: 2rem;
+        display: block;
+        width: 100%;
+    }
+    
+    #navPanel .links li {
+        width: 100%;
+    }
+    
+    #navPanel .links li a {
+        padding: 0.75rem 0;
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* Fix for social icons in the mobile menu */
+    #navPanel .icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+
+    #navPanel .icons li {
+        margin: 0.5rem;
+    }
+} 
